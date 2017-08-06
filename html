@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Data</title>
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+	
+	.jumbotron{
+		text-align: center;
+		background-color: black;
+		color: white;
+	}
+</style>
+</head>
+<body>
+<div class = "container">
+<div class="jumbotron">
+  <h1>Employee Data Management</h1>
+  <p>A Comprehensive Directory of Employee Billable Hours</p>
+</div>
+
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Current Employees</div>
+<!-- Table -->
+  <table class="table">
+   <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Role</th>
+          <th>Start Date</th>
+          <th>Months Worked</th>
+          <th>Monthly Rate ($)</th>
+          <th>Total Billed ($)</th>
+        </tr>
+      </thead>
+      <tbody id = "employeeData">
+        <tr class = "tableRow">
+          <td class = "name"></td>
+          <td class = "role"></td>
+          <td class = "startDate"></td>
+          <td class = "monthsWorked"></td>
+          <td class = "monthlyRate"></td>
+          <td class = "totalBilled"></td>
+        </tr>
+      </tbody>
+    </table>
+  </table>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add Employee</h3>
+    </div>
+    
+    <div class="panel-body">
+      <form id = "form">
+    		<p><strong>Employee Name</strong></p>
+    		<input type="text" class="form-control"  id = "name-input" style = "width: 100%">
+    		<br>
+    		<p><strong>Role</strong></p>
+    		<input type="text" class="form-control" id = "role-input">
+    		<br>
+    		<p><strong>Start Date</strong></p>
+    		<input type="date" class="form-control"  id = "startDate-input">
+    		<br>
+    		<p><strong>Monthly Rate</strong></p>
+    		<input type="text" class="form-control"  id = "monthlyRate-input">
+    		<br>
+    	  	<button type="button" class="btn btn-primary" id= "submit">Submit</button>
+      </form>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.js"
+  integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="assets/js/train.js"></script>
+</body>
+</html>
